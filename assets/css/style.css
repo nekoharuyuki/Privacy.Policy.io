@@ -1,0 +1,276 @@
+/*============================*/
+/*全般設定
+/*============================*/
+
+/*色指定をして下さい*/
+:root {
+	--main-color:#1F85AB;		/*ボタン・フッターなどのメインカラー*/
+	--main-title-color: #333;	/*ヘッダータイトルカラー*/
+	--main-text-color: #555;	/*本文カラー*/
+}
+
+
+/*以下は設定不要です*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+	font: normal 16px sans-serif;
+	color: var(--main-text-color);
+}
+ul, nav{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+
+	opacity: 0.9;
+}
+a:hover{
+	opacity: 1;
+}
+a.btn{
+	color: #fff;
+	border-radius: 4px;
+	text-transform: uppercase;
+	background-color: var(--main-color);
+	font-weight: 800;
+	text-align: center;
+}
+hr{
+	width: 200px;
+	height: 2px;
+	background-color: var(--main-color);;
+	border: 0;
+	margin: 40px 0;
+}
+section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 50px 50px;
+}
+div.hiduke{
+	width: 650px;
+	padding: 50px 50px;
+}
+
+@media (max-width: 1000px){
+	section{
+		padding: 100px 50px;
+	}
+	div.hiduke{
+		padding: 100px 50px;
+	}
+}
+
+@media (max-width: 600px){
+	section{
+		padding: 80px 30px;
+	}
+	div.hiduke{
+		width: 350px;
+		padding: 80px 30px;
+	}
+}
+section p{
+	max-width: 800px;
+	text-align: left;
+	margin-bottom: 35px;
+	padding: 0 20px;
+	line-height: 2;
+}
+div.hiduke{
+	max-width: 800px;
+	text-align: right;
+	margin-bottom: 35px;
+	padding: 0 20px;
+	line-height: 2;
+}
+ul.grid{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+/*============================*/
+/*ヘッダー設定
+/*============================*/
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 35px 100px 0;
+}
+header h2{
+	font-family: 'Quicksand', sans-serif;
+}
+header nav{
+	font-size: 14px;
+	display: flex;
+}
+header nav li{
+	margin: 0 15px;
+}
+header nav li:first-child{
+	margin-left: 0;	
+}
+header nav li:last-child{
+	margin-right: 0;	
+}
+
+@media (max-width: 1000px){
+	header{
+		padding: 20px 50px;
+	}
+}
+
+@media (max-width: 700px){
+	header{
+		flex-direction: column;		
+	}
+	header h2{
+		margin-bottom: 15px;
+	}
+}
+
+
+/*============================*/
+/*見出しセクション
+/*============================*/
+.hero{
+	/*position: relative;*/
+	justify-content: center;
+	min-height: 100px;
+	text-align: center;
+	margin-top: 30px;
+}
+.hero h1{
+	font: bold 50px 'Open Sans', sans-serif;
+	margin: 30px 0 15px;
+	color: var(--main-title-color);
+}
+.hero h3{
+	font: normal 20px 'Open Sans', sans-serif;
+	margin-bottom: 20px;
+}
+.features a.btn{
+	padding: 20px 46px;
+}
+
+@media (max-width: 800px){
+	.hero{
+		min-height: 300px;
+	}
+	.hero h1{
+		font-size: 38px;
+	}
+	.hero h3{
+		font-size: 20px;
+	}
+	.features a.btn{
+		padding: 15px 40px;
+	}
+}
+
+
+/*============================*/
+/*本文セクション
+/*============================*/
+.features{
+	background-color: #f7f7f7;
+}
+.features .grid li{
+	padding: 0 5px;
+	flex-basis: 33%;
+	text-align: center;
+}
+.features .grid li i{
+    font-size: 40px;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+.features .grid li h4{
+	color: var(--main-text-color);
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+.features .grid li p{
+	font-size: 14px;
+    margin: 0;
+}
+.features .grid li i.inq{
+    font-size: 22px;
+    color: var(--main-color);
+    margin: 10px;
+}
+
+@media (max-width: 1000px){
+	.features .grid li{
+		flex-basis: 70%;
+		margin-bottom: 65px;
+	}
+	.features .grid li:last-child{
+		margin-bottom: 0;
+	}
+}
+
+@media (max-width: 600px){
+	.features .grid li{
+		flex-basis: 100%;
+	}
+}
+
+
+/*============================*/
+/*フッターセクション
+/*============================*/
+footer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	background-color: var(--main-color);
+	padding: 60px 0;
+}
+footer ul{
+	display: flex;
+	margin-bottom: 25px;
+	font-size: 32px;
+}
+footer ul li{
+	margin: 0 8px;	
+}
+footer ul li:first-child{
+	margin-left: 0;	
+}
+footer ul li:last-child{
+	margin-right: 0;	
+}
+footer p{
+	text-transform: uppercase;
+	font-size: 10px;
+	color: rgba(255,255,255,0.6);
+	margin-bottom: 10px;
+}
+footer p a{
+	color: #fff;
+}
+
+@media (max-width: 700px){
+	footer{
+		padding: 80px 15px;
+	}
+}
